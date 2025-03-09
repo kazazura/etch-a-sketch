@@ -8,9 +8,17 @@ function createGrid(size) {
         for (let o = 1; o <= size; o++) {
             const row = document.createElement("div");
             row.classList.add("grid-row");
-            row.addEventListener('mouseover',
-                e => e.target.classList.add('mouse-hover')
-            );
+
+            function generateRandomColor() {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+
+                row.addEventListener('mouseover', () => {
+                    row.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+                });
+            }
+            generateRandomColor();
             column.appendChild(row);
         }
         gridContainer.appendChild(column);
@@ -30,8 +38,19 @@ function resetGrid() {
     }
 }
 
+function generateRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    row.addEventListener('mouseover', () => {
+        row.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+    });
+}
+
+
 btnSquare.addEventListener('click', () => {
-    while(gridContainer.firstChild) {
+    while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.lastChild);
     }
     resetGrid();
