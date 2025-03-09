@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.grid-container {
+    display: flex;
+    height: 960px;
+    width: 960px;
+    background-color: aliceblue;
+}
+
+.grid-container>div {
+    height: auto;
+    flex: 1 0 auto;
+
+    /* make columns vertical flexboxes */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container>div>* {
+    /* make rows evenly distributed */
+    flex: 1;
+}
+
+.grid-column, .grid-row {
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+}
