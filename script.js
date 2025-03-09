@@ -38,17 +38,6 @@ function resetGrid() {
     }
 }
 
-function generateRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-
-    row.addEventListener('mouseover', () => {
-        row.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
-    });
-}
-
-
 btnSquare.addEventListener('click', () => {
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.lastChild);
