@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
 
 .grid-container {
     display: flex;
@@ -25,8 +32,12 @@
     flex: 1;
 }
 
-.grid-column, .grid-row {
+.grid-row {
     border-color: black;
     border-style: solid;
     border-width: thin;
+}
+
+.mouse-hover {
+    background-color: aqua;
 }
