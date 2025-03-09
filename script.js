@@ -38,7 +38,7 @@ function createGrid(size) {
 createGrid(16);
 
 function resetGrid() {
-    const input = prompt("Enter the a number: ");
+    const input = prompt("Enter the number of squares per side: ");
     if (input > 100) {
         alert("The number of squares must be equal to or less than 100.");
         createGrid(16);
